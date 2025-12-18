@@ -1,0 +1,24 @@
+{% extends "principal.html" %}
+{% block navbar %}{% include "nav.html" %}{% endblock %}
+
+{% block content %}
+<h2>Buscar Pacientes</h2>
+
+<form method="GET">
+    <input class="form-control mb-2" name="termo" placeholder="Nome do animal">
+    <button class="btn btn-primary">Buscar</button>
+</form>
+
+<table class="table mt-3">
+<tr>
+    <th>Nome</th><th>Raça</th><th>Tutor</th>
+</tr>
+{% for a in animais %}
+<tr>
+    <td>{{ a.nome }}</td>
+    <td>{{ a.raca }}</td>
+    <td>{{ a.tutor }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

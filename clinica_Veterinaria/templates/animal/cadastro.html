@@ -1,0 +1,15 @@
+{% extends "principal.html" %}
+{% block navbar %}{% include "nav.html" %}{% endblock %}
+
+{% block content %}
+<h2>Cadastrar Animal</h2>
+
+<form method="POST">
+    <input class="form-control mb-2" name="nome" placeholder="Nome" required>
+    <input class="form-control mb-2" type="number" name="idade" placeholder="Idade">
+    <input class="form-control mb-2" type="number" step="0.1" name="peso" placeholder="Peso">
+    <input class="form-control mb-2" name="id_cliente" placeholder="ID do Cliente">
+    <input class="form-control mb-2" name="id_raca" placeholder="ID da Raça">
+    <button class="btn btn-success">Salvar</button>
+</form>
+{% endblock %}

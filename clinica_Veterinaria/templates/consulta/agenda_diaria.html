@@ -1,0 +1,18 @@
+{% extends "principal.html" %}
+{% block navbar %}{% include "nav.html" %}{% endblock %}
+
+{% block content %}
+<h2>Agenda de Consultas</h2>
+
+<table class="table">
+<tr><th>Data</th><th>Status</th></tr>
+{% for c in consultas %}
+<tr>
+    <td>{{ c.data_hora }}</td>
+    <td>{{ c.status }}</td>
+</tr>
+{% else %}
+<tr><td colspan="2">Sem consultas</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

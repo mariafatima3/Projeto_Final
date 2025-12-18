@@ -1,0 +1,16 @@
+{% extends "principal.html" %}
+{% block navbar %}{% include "nav.html" %}{% endblock %}
+
+{% block content %}
+<h2>Meus Animais</h2>
+
+<ul class="list-group">
+{% for animal in animais %}
+    <li class="list-group-item">
+        {{ animal.nome }} ({{ animal.raca }})
+    </li>
+{% else %}
+    <li class="list-group-item text-muted">Nenhum animal cadastrado.</li>
+{% endfor %}
+</ul>
+{% endblock %}

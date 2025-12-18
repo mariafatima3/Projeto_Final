@@ -1,0 +1,17 @@
+{% extends "principal.html" %}
+{% block navbar %}{% include "nav.html" %}{% endblock %}
+
+{% block content %}
+<h2>Gestão de Usuários</h2>
+
+<table class="table">
+<tr><th>Nome</th><th>Login</th><th>Tipo</th></tr>
+{% for u in usuarios %}
+<tr>
+    <td>{{ u.nome }}</td>
+    <td>{{ u.login }}</td>
+    <td>{{ u.tipo }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

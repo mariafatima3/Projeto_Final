@@ -1,0 +1,13 @@
+{% extends "principal.html" %}
+{% block navbar %}{% include "nav.html" %}{% endblock %}
+
+{% block content %}
+<h2>Agendar Consulta</h2>
+
+<form method="POST">
+    <input class="form-control mb-2" name="id_animal" placeholder="ID Animal">
+    <input class="form-control mb-2" name="id_veterinario" placeholder="ID Veterinário">
+    <input class="form-control mb-2" type="datetime-local" name="data_hora">
+    <button class="btn btn-primary">Agendar</button>
+</form>
+{% endblock %}

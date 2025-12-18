@@ -1,0 +1,12 @@
+{% extends "principal.html" %}
+{% block navbar %}{% include "nav.html" %}{% endblock %}
+
+{% block content %}
+<h2>Concluir Consulta</h2>
+
+<form method="POST">
+    <textarea class="form-control mb-2" name="diagnostico" placeholder="Diagnóstico" required></textarea>
+    <textarea class="form-control mb-2" name="prescricao" placeholder="Prescrição"></textarea>
+    <button class="btn btn-success">Concluir</button>
+</form>
+{% endblock %}
